@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motion Studio — Портфолио</title>
+  <meta name="description" content="Портфолио моушн-дизайнера и монтажёра" />
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-title" id="topbarTitle">Motion Studio</div>
+  </div>
+
+  <main class="page">
+    <!-- ===== Header / Hero ===== -->
+    <header class="hero">
+      <div class="hero-main">
+        <h1 class="hero-title" id="studioName">Motion Studio</h1>
+        <p class="hero-desc" id="studioDesc">
+          Занимаюсь всем понемногу: от моушн-дизайна и 3D-анимации до графического
+          дизайна и всего, что связано с видео.
+        </p>
+        <a class="btn" id="contactBtn" href="mailto:hello@example.com">
+          <span class="btn-icon">✉️</span> Связаться
+        </a>
+      </div>
+
+      <div class="hero-links" id="socialLinks">
+        <!-- filled by script.js -->
+      </div>
+    </header>
+
+    <hr class="divider" />
+
+    <!-- ===== Selected Work ===== -->
+    <section class="work">
+      <div class="work-head">
+        <h2 class="work-title">Избранные работы</h2>
+        <div class="work-tools">
+          <button class="tool-btn" id="searchToggle" aria-label="Поиск" title="Поиск">
+            <svg viewBox="0 0 20 20" width="16" height="16"><path fill="currentColor" d="M8.5 3a5.5 5.5 0 0 1 4.23 9.02l3.12 3.13a1 1 0 0 1-1.41 1.41l-3.13-3.12A5.5 5.5 0 1 1 8.5 3Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="search-wrap" id="searchWrap" hidden>
+        <input type="text" id="searchInput" class="search-input" placeholder="Искать по названию или тегу…" />
+      </div>
+
+      <div class="grid" id="grid"><!-- cards injected by script.js --></div>
+      <p class="empty" id="emptyState" hidden>Ничего не найдено.</p>
+    </section>
+
+    <footer class="foot">
+      <span id="footName">Motion Studio</span> · Сделано с ♥ · <span id="year"></span>
+    </footer>
+  </main>
+
+  <!-- ===== Modal ===== -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Закрыть">
+        <svg viewBox="0 0 20 20" width="18" height="18"><path fill="currentColor" d="M6.4 5 10 8.6 13.6 5 15 6.4 11.4 10 15 13.6 13.6 15 10 11.4 6.4 15 5 13.6 8.6 10 5 6.4 6.4 5Z"/></svg>
+      </button>
+      <div class="modal-scroll" id="modalScroll"><!-- content injected --></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
